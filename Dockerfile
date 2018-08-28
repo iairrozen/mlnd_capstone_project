@@ -1,7 +1,5 @@
 FROM python:3.7.0
 
-WORKDIR /app
-ADD . /app
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 RUN jupyter contrib nbextension install --system
 
