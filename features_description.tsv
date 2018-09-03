@@ -25,7 +25,7 @@ roadLane	categorical	string	The lane confguration of the road.	"1': one way, '2'
 roadMarkings	categorical	string	The road markings at the crash site.	"'Ped Crossing', 'Raised Island', 'Painted Island', 'No Passing Lanes', 'Centre Line', 'No Marks', 'Unknown'"
 roadSurface	categorical	string	The road surface description applying at the crash site.	"Sealed', 'Unsealed'"
 roadWet	categorical	string	The road wetness at the time and place of the crash.	"'Wet', 'Dry', 'Ice/Snow', 'Unknown'"
-numberOfLanes	numerical	int	The number of lanes on the crash road.	
+numberOfLanes	categorical	int	The number of lanes on the crash road.	
 trafficControl	categorical	string	The traffc control signals at the crash site.	"'Traffc Signals', 'Stop Sign', 'Give Way Sign', 'Pointsman', 'School Patrol', 'Nil', 'N/A'"
 speedLimit	numerical	int	The speed limit in force at the crash site at the time of the crash.	
 advisorySpeed	numerical	int	The advisory speed at the crash site at the time of the crash.	
