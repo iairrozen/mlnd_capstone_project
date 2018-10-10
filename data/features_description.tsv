@@ -1,0 +1,75 @@
+feature_name	feature_type	pandas_dtype	feature_meanin	possible_values
+cornerRoadSideRoad	categorical	category	"Indicates whether the principal vehicle in a crash was on the crash road or side road at the time of the crash. Note that 'on side road' can only happen if the crash occurred at an intersection. Note that the feature has its name mispelled. Nevertheless, this is of no consequence."	"1: Crash Road, 2: Side Road"
+crashRPSH	categorical	category	The State Highway on which a crash occurred.	
+crashSeverity	categorical	category	Single letter indication crash severity.	N: non-injury. M: minor. S:serious. F: fatal
+crashSHDescription	categorical	category	Indicates where a crash is reported to have occurred on a State Highway.	"Yes', 'No'"
+darkLight	categorical	category	Derived feature from the 'light' feature.	"'Dark', 'Light', 'Unknown'"
+directionRoleDescription	categorical	category	The direction (dirn) of the principal vehicle involved in the crash.	"North', 'South', 'East' or 'West'"
+flatHill	categorical	category	Whether the road is fat or sloped.	"Flat', 'Hill', 'Unknown'"
+holiday	categorical	category	Indicates whether the crash happened during a hilliday and which one.	None. Christmas/New Year. Easter. Queens Birthday. Labour Weekend
+intersection	categorical	category	"Indicate if a crash happened at an 'Intersection', 'At Landmark' or 'Unknown'."	
+intersectionMidblock	categorical	category	Derived feature to indicate if a crash occured at an intersection or not. It is calculated using the 'intersection' and 'junction_type' features.	"Intersection', 'Midblock'"
+junctionType	categorical	category	The type of junction the crash happened at. Possible road junctions include . The junction type may also be unknown. Crashes that did not occur at a junction are also given a value of unknown.	"ÔDrivewayÕ, ÔRoundaboutÕ, ÔX Type JunctionÕ, 'T Type Junction', 'Y Type Junction', or 'Multi Road Join', 'unknown'"
+light	categorical	category	The light at the time and place of the crash.	"'Bright Sun', 'Overcast', 'Twilight, 'Dark', 'Unknown'"
+multiVehicle	categorical	category	Type of crash depending on amount and type of vehicles (and pedestrians) involved.	Multi vehicle. Single vehicle. Vehicle(s)+Pedestrian(s). Vehicle(s)+Cyclist(s) only. Cyclists only. Vehicle(s)+multiple other types. Cyclist(s)+Pedestrian(s) only. Other. Others without non-parked veh
+regionDesc	categorical	category	Indicated the geographical (and political) region where the crash happened.	Auckland. Waikato. Canterbury. Wellington. Bay of Plenty. Otago. Manawatu/Wanganui. Northland. Hawkes Bay. Nelson/Marlborough. Southland. Taranaki. Gisborne. West Coast
+roadCharacter	categorical	category	The general nature of the road.	"'Bridge', 'Motorway Ramp', 'Railway Crossing', 'Unknown'"
+roadCurvature	categorical	category	The curvature of the road.	"Straight Road', 'Easy Curve', 'Moderate Curve', 'Severe curve'"
+roadLane	categorical	category	The lane confguration of the road.	"1': one way, '2': two way, 'M': for where a median exists, 'O': for off-road lane confguations, ' ': for unknown or invalid confguarations"
+roadMarkings	categorical	category	The road markings at the crash site.	"'Ped Crossing', 'Raised Island', 'Painted Island', 'No Passing Lanes', 'Centre Line', 'No Marks', 'Unknown'"
+roadSurface	categorical	category	The road surface description applying at the crash site.	"Sealed', 'Unsealed'"
+roadWet	categorical	category	The road wetness at the time and place of the crash.	"'Wet', 'Dry', 'Ice/Snow', 'Unknown'"
+streetLight	categorical	category	The street lighting at the time of the crash.	"'On', 'Off', 'None', 'Unknown'"
+tlaName	categorical	category	Indicates the local authority who handled the crash. Each region has several TLA.	"Several valuesper region. For example, Auckland has two TLA: Auckland and Waikato District. While Northland has three TLA: Whangarei District; Kaipara District and Far North District"
+trafficControl	categorical	category	The traffc control signals at the crash site.	"'Traffc Signals', 'Stop Sign', 'Give Way Sign', 'Pointsman', 'School Patrol', 'Nil', 'N/A'"
+urban	categorical	category	Derived feature using the 'speedLimit' feature.	"'Urban', 'Open Road'"
+weatherA	categorical	category	Indicates weather at the crash time/place.	"'Fine', 'Mist', 'Light Rain', 'Heavy Rain', 'Snow', 'Unknown'"
+weatherB	categorical	category	2nd level of detail for the weather at the crash time/place when applicable.	"'Frost', 'Strong Wind', 'Unknown'"
+X	geo	float	Longitude of the crash.	
+Y	geo	float	Latitude of the crash.	
+OBJECTID	id	int	ID for the crash.	
+crashYear	numerical	int	Year of the crash (yyyy).	
+fatalCount	numerical	int	Number of fatalities for crash of severity F.	
+seriousInjuryCount	numerical	int	Number of seriously injured people.	
+minorInjuryCount	numerical	int	Number of minor injured people.	
+numberOfLanes	numerical	int	The number of lanes on the crash road.	
+speedLimit	numerical	category	The speed limit in force at the crash site at the time of the crash.	
+advisorySpeed	numerical	category	The advisory speed at the crash site at the time of the crash.	
+temporarySpeedLimit	numerical	category	The temporary speed limit at the crash site if one exists (e.g. for road works).	
+animals	numerical	int	"Derived feature to indicate how many times an Animal was struck in the crash. This is used where the animals, being driven or led, were under control."	
+bridge	numerical	int	"Derived feature to indicate how many times a bridge, tunnel, the abutments, handrails were struck in the crash."	
+cliffBank	numerical	int	Derived feature to indicate how many times a cliff or bank was struck in the crash. This includes retaining walls	
+debris	numerical	int	"Derived feature to indicate how many times debris, boulders or items dropped or thrown from a vehicle(s) were struck in the crash."	
+ditch	numerical	int	Derived feature to indicate how many times a ditch or waterable drainage channel was struck in a crash.	
+fence	numerical	int	"Derived feature to indicate how many times a fence was struck in the crash. This includes letterbox(es), hoardings, private roadside furniture, hedges, sight rails, etc."	
+guardRail	numerical	int	"Derived feature to indicate how many times a guard or guard rail was struck in the crash. This includes 'New Jersey' barriers, 'ARMCO', sand filled barriers, wire catch fences, etc."	
+houseBuilding	numerical	int	"Derived feature to indicate how many times a houses, garages, sheds or other buildings were struck in the crash."	
+kerb	numerical	int	"Derived feature to indicate how many times a kerb was struck in the crash, that contributed directly to the crash."	
+objectThrownOrDropped	numerical	int	Derived feature to indicate how many times objects were thrown at or dropped on vehicles in the crash.	
+other	numerical	int	"Derived feature to indicate how many times an object was struck in a crash and the object struck was not pre-defined. This feature includes stockpiled materials, rubbish bins, fallen poles, fallen trees, etc."	
+overBank	numerical	int	Derived feature to indicate how many times an embankment was struck or driven over during a crash. This feature includes other vertical drops driven over during a crash.	
+parkedVehicle	numerical	int	Derived feature to indicate how many times a parked or unattended vehicle was struck in the crash. This feature can include trailers.	
+phoneBoxEtc	numerical	int	"Derived feature to indicate how many times a telephone kiosk traffic signal controllers, bus shelters or other public furniture was struck in the crash."	
+postOrPole	numerical	int	"Derived feature to indicate how many times a post or pole was struck in the crash. This includes light, power, phone, utility poles and objects practically forming part of a pole (i.e. 'Transformer Guy' wires)."	
+roadworks	numerical	int	"Derived feature to indicate how many times an object associated with roadworks (including signs, cones, drums, barriers, but not roadwork vehicles) was struck during the crash."	
+slipFlood	numerical	int	"Derived feature to indicate how many times landslips, washouts or floods (excluding rivers) were objects struck in the crash."	
+strayAnimal	numerical	int	"Derived feature to indicate how many times a stray animal(s) was struck in the crash. This feature includes wild animals such as pigs, goats, deer, straying farm animals, house pets and birds."	
+trafficIsland	numerical	int	"Derived feature to indicate how many times a traffic island, medians (excluding barriers) was struck in the crash."	
+trafficSign	numerical	int	"Derived feature to indicate how many times traffic signage (including traffic signals, their poles, bollards or roadside delineators) was struck in the crash."	
+train	numerical	int	"Derived feature to indicate how many times a train, rolling stock or jiggers was struck in the crash, whether stationary or moving."	
+tree	numerical	int	Derived feature to indicate how many times trees or other growing items were struck during the crash.	
+vehicle	numerical	int	"Derived feature to indicate how many times a stationary attended vehicle was struck in the crash. This includes broken down vehicles, workmen's vehicles, taxis, buses."	
+waterRiver	numerical	int	"Derived feature to indicate how many times a body of water (including rivers, streams, lakes, the sea, tidal flates, canals, watercourses or swanps) was struck in the crash."	
+bicycle	numerical	int	Derived feature to indicate how many bicycles were involved in the crash.	
+bus	numerical	int	Derived feature to indicate how many buses were involved in the crash (excluding school buses which are counted apart).	
+carStationWagon	numerical	int	Derived feature to indicate how many cars or station wagons were involved in the crash.	
+moped	numerical	int	Derived feature to indicate how many mopeds were involved in the crash.	
+motorCycle	numerical	int	Derived feature to indicate how many motorcycles were involved in the crash.	
+otherVehicleType	numerical	int	Derived feature to indicate how many other vehicles (not included in any other category) were involved in the crash.	
+schoolBus	numerical	int	Derived feature to indicate how many school buses were involved in the crash.	
+suv	numerical	int	Derived feature to indicate how many SUVs were involved in the crash.	
+taxi	numerical	int	Derived feature to indicate how many taxis were involved in the crash.	
+truck	numerical	int	Derived feature to indicate how many trucks were involved in the crash.	
+unknownVehicleType	numerical	int	Derived feature to indicate how many vehicles were involved in the crash (where the vehicle type is unknown).	
+vanOrUtility	numerical	int	Derived feature to indicate how many vans or utes were involved in the crash.	
+pedestrian	numerical	int	"Derived feature to indicate how many pedestrians were involved in the crash. This includes pedestrians on skateboards, scooters and wheelchairs."	
