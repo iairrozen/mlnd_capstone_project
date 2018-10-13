@@ -80,6 +80,8 @@ def structure_and_print_results(model_name, dataset_variation, y_true, y_pred, b
     precision = precision_score(y_true, y_pred, average=average)
     recall = recall_score(y_true, y_pred, average=average)
     f1 = f1_score(y_true, y_pred, average=average)
+
+    print('Model accuracy: ', accuracy_score(y_true, y_pred))
     print(classification_report(y_true, y_pred, digits=digits))
 
     n_classes = len(precision)
