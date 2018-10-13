@@ -5,8 +5,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from IPython.display import Markdown, display
 
-from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score,
-                             fbeta_score, classification_report)
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 plt.style.use('fivethirtyeight')
 
